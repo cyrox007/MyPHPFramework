@@ -8,10 +8,11 @@
                 > методы для работы с NoSQL;
                 > и др.
         */
+        private $server_url, $name_db, $user_name, $password;
 
         // метод выборки данных
         public function get_data()
         {
-            # code...
+            $this->server_url = getenv('DB_SERVER');
         }
     }

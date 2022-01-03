@@ -3,6 +3,6 @@
     {
         function action_index()
         {	
-            $this->view->generate('main_view.php', 'template_view.php');
+            $this->view->render_template('main_view.php', 'template_view.php');
         }
     }
