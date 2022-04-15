@@ -1,20 +1,4 @@
-#Кодировка контента по умолчанию
-AddDefaultCharset UTF-8
-
-#Индексный файл
-DirectoryIndex index.php
-
-#Запрет листинга директорий
-options -indexes
-
-RewriteEngine on
-Options +FollowSymlinks
-RewriteBase /
-RewriteRule ^.htaccess$ - [F]
-
-#Редиректы главная
-RewriteRule ^index$ index.php
-RewriteRule ^index/$ index.php
-RewriteRule ^edit$ notes/edit.php
-RewriteRule ^edit/$ notes/edit.php
-
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.php [L]
